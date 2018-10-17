@@ -1,6 +1,6 @@
-[![Build status](https://api.travis-ci.org/hCaptcha/ng-hcaptcha.svg?branch=master)](https://travis-ci.org/leNicDev/ng-hcaptcha)&nbsp;
+[![Build status](https://api.travis-ci.org/hCaptcha/ng-hcaptcha.svg?branch=master)](https://travis-ci.org/hCaptcha/ng-hcaptcha)&nbsp;
 [![GitHub license](https://img.shields.io/github/license/hCaptcha/ng-hcaptcha.svg)](https://github.com/hCaptcha/ng-hcaptcha/blob/master/LICENSE)&nbsp;
-[![GitHub issues](https://img.shields.io/github/issues/hCaptchhCaptcha/ng-hcaptcha.svg)](https://GitHub.com/hCaptcha/ng-hcaptcha/issues/)&nbsp;
+[![GitHub issues](https://img.shields.io/github/issues/hCaptcha/ng-hcaptcha.svg)](https://GitHub.com/hCaptcha/ng-hcaptcha/issues/)&nbsp;
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/hCaptcha/ng-hcaptcha.svg)](https://GitHub.com/hCaptcha/ng-hcaptcha/pull/)
 
 # ng-hcaptcha - hCaptcha Component for Angular 6+
