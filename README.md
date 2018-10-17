@@ -1,3 +1,8 @@
+[![Build status](https://api.travis-ci.org/hCaptcha/ng-hcaptcha.svg?branch=master)](https://travis-ci.org/leNicDev/ng-hcaptcha)&nbsp;
+[![GitHub license](https://img.shields.io/github/license/hCaptcha/ng-hcaptcha.svg)](https://github.com/hCaptcha/ng-hcaptcha/blob/master/LICENSE)&nbsp;
+[![GitHub issues](https://img.shields.io/github/issues/hCaptchhCaptcha/ng-hcaptcha.svg)](https://GitHub.com/hCaptcha/ng-hcaptcha/issues/)&nbsp;
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/hCaptcha/ng-hcaptcha.svg)](https://GitHub.com/hCaptcha/ng-hcaptcha/pull/)
+
 # ng-hcaptcha - hCaptcha Component for Angular 6+
 
 ng-hcaptcha provides an easy to use component for [hCaptcha](https://hcaptcha.com). 
@@ -14,17 +19,18 @@ This component is contributed and maintained by the hCaptcha community. You can 
 ## Installation
 
 ### Step 1 - Install the ng-hcaptcha dependency
-NPM:
-```shell
-npm install --save ng-hcaptcha
-```
 
-Yarn:
-```
+```shell
+# NPM
+npm install --save ng-hcaptcha
+
+# Yarn
 yarn add ng-hcaptcha
 ```
 
-### Step 2 - Import  the NgHcaptchaModule
+> You can use the tag 'next' to get the latest beta version.
+
+### Step 2 - Import the NgHcaptchaModule
 ```ts
 import { NgHcaptchaModule } from 'ng-hcaptcha';
 
@@ -47,10 +53,17 @@ import { NgHcaptchaModule } from 'ng-hcaptcha';
 
 Template:
 ```html
+<!-- Regular usage -->
 <ng-hcaptcha (verify)="onVerify($event)"
               (expired)="onExpired($event)"
               (error)="onError($event)">
 </ng-hcaptcha>
+
+<!-- Usage in forms -->
+<!-- The value of the form control will be the verification token -->
+<form [formGroup]="formGroup" (submit)="onSubmit()">
+    <ng-hcaptcha formControlName="captcha"></ng-hcaptcha>
+</form>
 ```
 
 TS:
@@ -76,7 +89,7 @@ If you found a bug or something you don't like, feel free to [open an issue](htt
 ## Contribute
 You can reach out to us on [telegram](https://t.me/hcaptchachat) 
 
-## Support me
+## Support me (note from the original author)
 
 If you would like to support me for free, just create your hCaptcha account using my referral link :relaxed:
 [https://hCaptcha.com/?r=4afcb2d42338](https://hCaptcha.com/?r=4afcb2d42338)
