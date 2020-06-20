@@ -3,7 +3,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/hCaptcha/ng-hcaptcha.svg)](https://GitHub.com/hCaptcha/ng-hcaptcha/issues/)&nbsp;
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/hCaptcha/ng-hcaptcha.svg)](https://GitHub.com/hCaptcha/ng-hcaptcha/pull/)
 
-# ng-hcaptcha - hCaptcha Component for Angular 6+
+# ng-hcaptcha - hCaptcha Component for Angular 7+
 
 ng-hcaptcha provides an easy to use component for [hCaptcha](https://hcaptcha.com). 
 
@@ -39,7 +39,8 @@ import { NgHcaptchaModule } from 'ng-hcaptcha';
         // Option #1
         // Set the sitekey globally for every hCaptcha component
         NgHcaptchaModule.forRoot({
-            siteKey: 'YOUR_SITEKEY'
+            siteKey: 'YOUR_SITEKEY',
+            languageCode: 'de' // optional, will default to browser language
         }),
 
         // Option #2
@@ -64,6 +65,12 @@ Template:
 <form [formGroup]="formGroup" (submit)="onSubmit()">
     <ng-hcaptcha formControlName="captcha"></ng-hcaptcha>
 </form>
+
+<!-- Invisible captcha -->
+<button ngHcaptchaInvisibleButton
+        (verify)="onVerify($event)"
+        (expired)="onExpired($event)"
+        (error)="onError($event)">Click me</button>
 ```
 
 TS:
@@ -81,6 +88,13 @@ onError(error: any) {
     // An error occured during the verification process.
 }
 ```
+
+## Properties
+The properties below exist for all captcha components.
+
+`siteKey` Allows you to set the site key per captcha instance.
+
+`languageCode` Allows you to force a specific language. See https://docs.hcaptcha.com/languages
 
 ## Bugs? Ideas?
 
